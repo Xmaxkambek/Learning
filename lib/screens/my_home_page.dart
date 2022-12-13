@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Divider(color: Colors.grey, indent: 70),
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(trailing: Icon(Icons.arrow_circle_down),
+                return ListTile(trailing: const Icon (Icons.arrow_circle_down),
                   title: Text(snapshot.data[index]['name']['first']),
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(

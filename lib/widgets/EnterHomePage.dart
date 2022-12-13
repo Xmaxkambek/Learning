@@ -4,7 +4,7 @@ class EnterPage extends StatelessWidget {
   final Map user;
   const EnterPage({super.key, required this.user});
 
-  Widget con(double height,Text text,) {
+  Widget  con(double height, Text text) {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: Container(
@@ -31,10 +31,13 @@ class EnterPage extends StatelessWidget {
           children: [
             Image.network(user['picture']['large']),
             con(
-               50,
+                50,
                 Text(user['name']['last'] + "  " + user['name']['first'],
                     style: const TextStyle(fontSize: 15))),
-            con(50, Text(user['dob']["age"].toString()),),
+            con(
+              50,
+              Text(user['dob']["age"].toString()),
+            ),
             con(50, Text(user['location']['country'])),
           ],
         ),
